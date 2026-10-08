@@ -1,0 +1,251 @@
+{
+  "project": {
+    "name": "Metamorphosis Landing Page",
+    "owner": "Konstantinos (conchr)",
+    "email": "metamorphosisMD@protonmail.com",
+    "purpose": "Hub για όλες τις Windows desktop εφαρμογές του δημιουργού",
+    "business_model": "Lifetime licenses, 14-day free trial, no subscriptions",
+    "payment_processor": "Lemon Squeezy (Merchant of Record)"
+  },
+
+  "urls": {
+    "github_repo": "https://github.com/conchr/Metamorphosis",
+    "github_pages_hub": "https://conchr.github.io/Metamorphosis/",
+    "github_pages_copycat": "https://conchr.github.io/Metamorphosis/copycat/",
+    "github_pages_langindicator": "https://conchr.github.io/Metamorphosis/langindicator/",
+    "privacy": "https://conchr.github.io/Metamorphosis/privacy.html",
+    "terms": "https://conchr.github.io/Metamorphosis/terms.html"
+  },
+
+  "local_path": "U:\\Software development\\Github Landing Page",
+
+  "folder_structure": {
+    "root": {
+      "index.html": "Hub — λίστα με όλες τις εφαρμογές",
+      "privacy.html": "Privacy Policy",
+      "terms.html": "Terms of Service",
+      "landing_context.json": "Αυτό το αρχείο",
+      "assets/": {
+        "style.css": "Κοινό CSS για όλες τις σελίδες",
+        "logo.png": "Logo Metamorphosis"
+      }
+    },
+    "per_app": {
+      "pattern": "{app_name}/",
+      "files": {
+        "index.html": "Σελίδα της εφαρμογής",
+        "logo.png": "Logo της εφαρμογής",
+        "screenshots/": {
+          "main.png": "Κύριο screenshot (μικρό — 210px)",
+          "settings.png": "Settings screenshot (μεγάλο — grid)",
+          "editor.png": "Editor screenshot (προαιρετικό)",
+          "themes.png": "Themes screenshot (προαιρετικό)"
+        }
+      }
+    }
+  },
+
+  "existing_apps": [
+    {
+      "name": "CopyCat",
+      "slug": "copycat",
+      "tagline": "Snippet Bar for Windows",
+      "description": "One-click access to your most-used text. Bar or popup mode. Categories, variables, multi-monitor. 100% offline.",
+      "price": "€14.99 lifetime",
+      "badge_color": "green",
+      "platform": "Windows 10/11",
+      "version": "1.0.0",
+      "logo_path": "copycat/logo.png",
+      "page_path": "copycat/index.html",
+      "screenshots": [
+        "copycat/screenshots/main.png",
+        "copycat/screenshots/editor.png",
+        "copycat/screenshots/settings.png"
+      ],
+      "features": [
+        "One-click paste",
+        "Two modes (Bar / Popup)",
+        "Categories / folders",
+        "Global hotkeys (Ctrl+Shift+Space)",
+        "Quick hotkeys (Ctrl+Shift+1..9)",
+        "100% offline",
+        "Multi-monitor",
+        "Fully customizable",
+        "English + Greek interface"
+      ],
+      "lemon_squeezy_urls": {
+        "trial": "TBD",
+        "buy": "TBD"
+      }
+    },
+    {
+      "name": "LangIndicator",
+      "slug": "langindicator",
+      "tagline": "Keyboard Language Indicator",
+      "description": "A tiny always-on-top indicator that shows your active keyboard language. Never type in the wrong language again.",
+      "price": "€9.99 lifetime",
+      "badge_color": "green",
+      "platform": "Windows 10/11",
+      "version": "1.0.0",
+      "logo_path": "langindicator/logo.png",
+      "page_path": "langindicator/index.html",
+      "screenshots": [
+        "langindicator/screenshots/main.png",
+        "langindicator/screenshots/settings.png",
+        "langindicator/screenshots/themes.png"
+      ],
+      "features": [
+        "Always-on-top indicator",
+        "6 built-in themes + customization",
+        "Caps / Num / Scroll lock indicators",
+        "Auto-hide in fullscreen apps",
+        "Edge snapping when dragging",
+        "System tray icon",
+        "Start with Windows (optional)"
+      ],
+      "lemon_squeezy_urls": {
+        "trial": "TBD",
+        "buy": "TBD"
+      }
+    }
+  ],
+
+  "design_system": {
+    "colors": {
+      "base": "#1e1e2e",
+      "mantle": "#181825",
+      "crust": "#11111b",
+      "surface": "#313244",
+      "surface2": "#45475a",
+      "text": "#cdd6f4",
+      "subtext": "#a6adc8",
+      "blue": "#89b4fa",
+      "green": "#a6e3a1",
+      "mauve": "#cba6f7",
+      "yellow": "#f9e2af",
+      "red": "#f38ba8"
+    },
+    "palette_name": "Catppuccin Mocha",
+    "font": "Segoe UI, -apple-system, BlinkMacSystemFont, sans-serif",
+    "style": {
+      "border_radius": "12-16px",
+      "max_width_container": "1100px",
+      "mobile_breakpoint": "720px",
+      "grid_gap": "24px"
+    }
+  },
+
+  "layout_specifications": {
+    "hub_index": {
+      "sections": [
+        "Header (sticky, logo + nav links)",
+        "Hero (title + subtitle + CTA)",
+        "Apps Grid (app cards)",
+        "About",
+        "Contact",
+        "Footer"
+      ],
+      "app_card": {
+        "elements": ["app-icon (64x64)", "app-info (h3 + tagline + desc + badges)", "arrow"],
+        "hover": "translateY(-4px), border-color accent, box-shadow",
+        "placeholder_card": "dashed border, για επόμενες εφαρμογές"
+      }
+    },
+    "app_page": {
+      "pattern": "copycat/index.html — αντίγραψε για νέες εφαρμογές",
+      "sections": [
+        "Header (back to all apps link)",
+        "App Hero (logo 96px + title + description + CTAs + meta)",
+        "Screenshots (main small + grid large)",
+        "Features Grid (auto-fit, min 280px)",
+        "Pricing (2 columns: Trial + Lifetime)",
+        "FAQ (details/summary items)",
+        "Contact"
+      ],
+      "important_css_overrides": {
+        "screenshot-main_max_width": "210px (για μικρές εφαρμογές σαν κύκλο)",
+        "screenshot-grid_max_width": "900px (για μεγάλες εφαρμογές πλήρους οθόνης)",
+        "screenshot-main_padding": "10px",
+        "screenshot-main_border_radius": "6px"
+      }
+    }
+  },
+
+  "git_workflow": {
+    "install": "git-scm.com/download/win",
+    "initial_setup": [
+      "git config --global user.name \"Konstantinos\"",
+      "git config --global user.email \"metamorphosisMD@protonmail.com\""
+    ],
+    "authentication": {
+      "method": "Personal Access Token (PAT)",
+      "where_to_create": "https://github.com/settings/tokens",
+      "token_type": "classic",
+      "required_scopes": ["repo"],
+      "note": "Χρησιμοποιείται ΩΣ password όταν ζητάει"
+    },
+    "common_commands": {
+      "navigate": "cd \"U:\\Software development\\Github Landing Page\"",
+      "check_status": "git status",
+      "add_all": "git add .",
+      "add_specific": "git add path/to/file.html",
+      "commit": "git commit -m \"Message describing change\"",
+      "push": "git push",
+      "pull": "git pull origin main --allow-unrelated-histories",
+      "log": "git log --oneline -10"
+    },
+    "conflict_resolution": {
+      "keep_local": "git checkout --ours file.html",
+      "keep_remote": "git checkout --theirs file.html",
+      "then": ["git add file.html", "git commit -m \"Resolve conflict\"", "git push"]
+    },
+    "adding_new_app": [
+      "1. Δημιούργησε φάκελο: mkdir {app_slug}",
+      "2. Δημιούργησε: mkdir {app_slug}\\screenshots",
+      "3. Αντίγραψε το copycat/index.html → {app_slug}/index.html",
+      "4. Άλλαξε: title, h1, description, features, price, logo_path",
+      "5. Πρόσθεσε: {app_slug}/logo.png",
+      "6. Πρόσθεσε: {app_slug}/screenshots/*.png",
+      "7. Άνοιξε το root index.html → αντίγραψε ένα <a class=\"app-card\"> block",
+      "8. Άλλαξε: href, logo, name, tagline, description, badges",
+      "9. git add . && git commit -m \"Add {AppName}\" && git push"
+    ]
+  },
+
+  "templates": {
+    "app_card_hub": "<a href=\"{slug}/\" class=\"app-card\">\n  <div class=\"app-icon\">\n    <img src=\"{slug}/logo.png\" alt=\"{Name}\">\n  </div>\n  <div class=\"app-info\">\n    <h3>{Name}</h3>\n    <p class=\"app-tagline\">{Tagline}</p>\n    <p class=\"app-desc\">{Description}</p>\n    <div class=\"app-meta\">\n      <span class=\"badge badge-green\">€{price} lifetime</span>\n      <span class=\"badge\">Windows</span>\n      <span class=\"badge\">v1.0.0</span>\n    </div>\n  </div>\n  <div class=\"app-arrow\">→</div>\n</a>"
+  },
+
+  "instructions_for_new_conversation": {
+    "summary": "Θέλω να προσθέσω νέα εφαρμογή στο Metamorphosis landing page.",
+    "steps": [
+      "1. Διάβασε αυτό το landing_context.json για όλες τις προδιαγραφές.",
+      "2. Χρησιμοποίησε το copycat/index.html ως template για τη νέα εφαρμογή.",
+      "3. Χρησιμοποίησε το design_system (Catppuccin Mocha) για συνέπεια.",
+      "4. Πρόσθεσε app card στο root index.html.",
+      "5. Ακολούθησε το git_workflow για push."
+    ],
+    "app_template_variables": [
+      "{Name} — όνομα εφαρμογής",
+      "{slug} — φάκελος (lowercase, no spaces)",
+      "{Tagline} — σύντομη περιγραφή (5-7 λέξεις)",
+      "{Description} — 1-2 προτάσεις",
+      "{price} — τιμή σε ευρώ",
+      "{features} — 6-8 features για το features grid"
+    ]
+  },
+
+  "notes": {
+    "screenshot_sizing": "Για εφαρμογές που είναι μικρά UI elements (κύκλοι, indicators) → main screenshot 210px. Για εφαρμογές που γεμίζουν την οθόνη (bars, editors) → 800px+.",
+    "app_card_hover": "Όλα τα app cards έχουν hover effect — translateY + shadow",
+    "dark_theme_only": "Η σελίδα είναι μόνο dark theme (Catppuccin Mocha)",
+    "no_dependencies": "Καθαρό HTML/CSS. Δεν χρησιμοποιείται JavaScript ή frameworks.",
+    "github_pages": "Deploy αυτόματα από branch 'main', φάκελο root",
+    "support_email": "metamorphosisMD@protonmail.com (παντού)"
+  },
+
+  "future_apps_placeholder": [
+    "Θα προστεθούν εδώ νέες εφαρμογές όταν είναι έτοιμες",
+    "Κάθε νέα εφαρμογή: φάκελος + logo + screenshots + index.html + app card στο hub"
+  ]
+}
